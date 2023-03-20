@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: pink;
+}
+
+body {
+  background: url("/Imagens/folha.png");
+  background-size: 150vh 100vh;
+background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Permanent Marker", cursive;
+
+
+  position: absolute;
+}
+h1{
+    text-shadow: 0.1em 0.1em #333;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper,
+.button-wrapper {
+  text-align: center;
+  margin: 5px;
+
+}
+@keyframes btn-pisca {
+    0% { opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.btn-pisca {
+ 
+  text-align: center;
+
+  color:#fff;
+
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+
+  -webkit-animation: btn-pisca 0.9s linear infinite;
+  -moz-animation: btn-pisca 0.9s linear infinite;
+  -ms-animation: btn-pisca .9s linear infinite;
+  -o-animation: btn-pisca .9s linear infinite;
+  animation: btn-pisca .9s linear infinite;
+}
+
+.outside-wrapper{
+    align-items: flex-start;
+    text-align: center;
+}
+
+.outside-wrapper:nth-child(2) {
+  width: 80%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.outside-wrapper:nth-child(3) {
+  margin-bottom: auto;
+
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+#statusMessage {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  height: 94px;
+}
+
+svg {
+  transform: rotate(-1deg);
+}
+
+.lives {
+  width: 30px;
+  height: auto;
+  margin-right: 45px;
+}
+
+.hiddenLife {
+  display: inline-block;
+  animation: lifeAway 0.6s forwards;
+}
+
+@keyframes lifeAway {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    transform: scale(1.5) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(0.5) rotate(720deg);
+  }
+
+  100% {
+    transform: scale(0) rotate(720deg);
+    opacity: 0;
+    display: none;
+  }
+}
+
+#categoryName {
+  font-size: 16px;
+margin-right: 30px;
+  
+
+}
+
+#warningText {
+  color: rgb(239, 83, 80);
+}
+
+.warning {
+  height: 30px;
+}
+
+
+#guessWrapper p {
+  font-size: 30px;
+  display: inline-block;
+  letter-spacing: 15px;
+  margin-bottom: 15px;
+  margin-top: 0;
+  color: green;
+  font-family: 'Noto Sans JP', sans-serif;
+
+
+}
+
+.inside-wrapper {
+  text-align: center;
+}
+
+.inside-wrapper:first-child {
+  width: 200px;
+  margin-top: 10px;
+}
+
+.inside-wrapper:last-child {
+  width: 300px;
+
+  box-sizing: border-box;
+  text-align: right;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inside-wrapper div:last-child {
+  margin-top: auto;
+}
+.progress-bar {
+    width: 100px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: green;
+    transition: width 0.5s ease-in-out;
+  }
+  
+#wrongLetters {
+  text-align: right;
+  margin-bottom: 70px;
+  margin-right: 30px;
+}
+
+
+#wrongLetters span {
+  text-align: right;
+  color: rgb(239, 83, 80);
+  letter-spacing: 5px;
+}
+
+@media (max-width: 768px) {
+    body{
+        background-size: 600px;
+        background-position: center
+    }
+    .inside-wrapper:first-child {
+       
+        margin-top: 55px;
+      }
+
+  #categoryName {
+    font-size: 12px;
+
+  }
+
+  .lives {
+    width: 15px;
+    margin-top: 55px;
+    margin-right: 12px;
+
+  }
+
+  #guessWrapper p {
+    font-size: 25px;
+  }
+  #wrongLetters {
+    font-size: 11px;
+    margin-right: 20px;
+    margin-top: 20px;
+    text-align: right;
+    margin-bottom: 50px;
+  }
+  .inside-wrapper:first-child {
+    width: 180px;
+    margin-top: 60px;
+  }
+
+}
+
+input {
+  border-radius: 7px;
+  border-style: none;
+  border: 1px solid gray;
+  text-align: center;
+  transition: 0.2s linear;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid green;
+}
+
+button {
+  transition: 0.2s linear;
+  outline: none;
+  border-style: none;
+  background-color: darkgray;
+  color: black;
+  border-radius: 7px;
+}
+
+button:hover,
+button:focus {
+  background-color: green;
+  outline: none;
+  color: white;
+}
+
+input,
+button {
+  padding: 5px 10px;
+  box-sizing: border-box;
+  letter-spacing: 3px;
+}
+footer{
+    text-align: center;
+    color: #f1f1f1;
+    text-shadow: 0.2em 0.1em #333;
+    font-family: 'Noto Sans JP', sans-serif;
+  margin-top: 12px;
+}
