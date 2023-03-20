@@ -64,7 +64,7 @@ window.onload = function () {
 
       if (!/[a-zA-Z]/.test(userLetter)) {
         unhideElements('hidden', warningText);
-        warningText.innerHTML = 'Please enter a letter from A-Z';
+        warningText.innerHTML = 'Por favor somente letras de A-Z sem acentos';
       } else {
         hideElements('hidden', warningText);
 
