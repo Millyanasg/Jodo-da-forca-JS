@@ -128,7 +128,7 @@ window.onload = function () {
     let btnWrapper = document.querySelector('.button-wrapper');
     hideElements('hidden', btnWrapper);
     if (win) {
-      winMessage.innerHTML = 'You Win';
+      winMessage.innerHTML = 'VOCÊ ACERTOU!';
       winMessage.style.color = 'green';
     } else {
       winMessage.innerHTML = 'Game Over';
